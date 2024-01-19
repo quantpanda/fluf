@@ -1,5 +1,15 @@
-## code to prepare `DATASET` dataset goes here
+# Workflow
+# License: MIT
 
+
+
+
+## code to prepare `DATASET` dataset goes here
+# this load a dataset of s&p500 stock prices for the last 4 years.
+library(tidyquant)
+library(tidyverse)
+
+## snp
 snp <-
   tidyquant::tq_get(
     c("SPY"),

@@ -1,12 +1,16 @@
 Package: fluf
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Financial Literacy Utility Functions
 Date: 2024-01-19
 Version: 0.1.0
-Author: Olivier Haley, Jamie Kim Raina Sharma
+Authors@R: c(
+    person("Olivier", "Haley", , "ohaley@ualberta.ca", role = c("aut", "cre")),
+    person("Jamie", "Kim", , "jjkim3@ualberta.ca", role = "aut") ,
+    person("Raina", "Sharma", , "rasharm1@ualberta.ca", role = "aut")
+  )
 Maintainer: Olivier Haley <ohaley@ualberta.ca>
-Description: Financial tools for the everyday user
-License: What license is it under?
+Description: The package fluf was developped by UofA finance students. The functions are financial tools for the everyday user.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
