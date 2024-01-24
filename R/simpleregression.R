@@ -6,12 +6,15 @@
 #' @return Linear regression stats
 #'
 #' @examples
+#' x <- c(2, 4, 6, 8)
+#' y <- c(10, 12, 14, 20)
+#' data <- data.frame(x, y)
+#'
 #' simpleregression(data)
 #'
-#' @import stats
 #' @export
 simpleregression <- function(data) {
-  lr <- lm(y ~ x, data = data)
+  lr <- stats::lm(y ~ x, data = data)
   lrstats <- summary(lr)
   return(lrstats)
 }

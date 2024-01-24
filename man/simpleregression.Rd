@@ -16,6 +16,10 @@ Linear regression stats
 This function takes two variables and runs a simple linear regression and outputs the stats
 }
 \examples{
+x <- c(2, 4, 6, 8)
+y <- c(10, 12, 14, 20)
+data <- data.frame(x, y)
+
 simpleregression(data)
 
 }

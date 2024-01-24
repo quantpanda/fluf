@@ -21,3 +21,14 @@ snp <-
   dplyr::group_by(series)
 
 usethis::use_data(snp, overwrite = T)
+
+## topTech
+topTech <-
+  tidyquant::tq_get(c("MSFT", "AAPL", "AMZN"),
+                    from = Sys.Date() - 365,
+                    to = Sys.Date(),
+                    get = "stock.prices") %>%
+  dplyr::select(date, series = symbol, price = adjusted) %>%
+  dplyr::group_by(series)
+
+usethis::use_data(topTech, overwrite = T)
