@@ -14,9 +14,6 @@
 plotter <- function(data) {
   plot <- plot_ly(data, x = ~date, y = ~value, color = ~series, type = "scatter", mode = "lines") %>%
     layout(
-      title = "S&P500 Price",
-      xaxis = list(title = "Date"),
-      yaxis = list(title = "Adjusted Price"),
       showlegend = TRUE
     )
 

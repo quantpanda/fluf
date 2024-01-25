@@ -11,3 +11,10 @@
 #' @returns `tibble`
 #' @source {Yahoo Finance}
 "topTech"
+
+#' dataset: IWM, and FXI pricing for last year
+#' @description Adjusted stock prices for IWM and FXI
+#' @format data frame
+#' @returns `tibble`
+#' @source {Yahoo Finance}
+"indexes"

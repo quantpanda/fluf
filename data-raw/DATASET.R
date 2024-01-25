@@ -8,6 +8,7 @@
 # this load a dataset of s&p500 stock prices for the last 4 years.
 library(tidyquant)
 library(tidyverse)
+library(tidyr)
 
 ## snp
 snp <-
@@ -32,3 +33,17 @@ topTech <-
   dplyr::group_by(series)
 
 usethis::use_data(topTech, overwrite = T)
+
+## index
+indexes <-
+  tidyquant::tq_get(c("FXI", "IWM"),
+                    from = Sys.Date() - 365,
+                    to = Sys.Date(),
+                    get = "stock.prices") %>%
+  dplyr::select(date, series = symbol, price = adjusted) %>%
+  tidyr::pivot_wider(names_from = series, values_from = price)
+
+usethis::use_data(indexes, overwrite = T)
+
+
+

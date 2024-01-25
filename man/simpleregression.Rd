@@ -2,24 +2,25 @@
 % Please edit documentation in R/simpleregression.R
 \name{simpleregression}
 \alias{simpleregression}
-\title{Runs a simple linear regression on two variables}
+\title{Runs a simple linear regression on two specified variables in a dataframe}
 \usage{
-simpleregression(data)
+simpleregression(data, indep_col, dep_col)
 }
 \arguments{
-\item{data}{A long dataframe with columns 'dependent' and 'independent'.}
+\item{data}{A dataframe containing at least two columns for regression analysis.}
+
+\item{indep_col}{Name of the independent variable column.}
+
+\item{dep_col}{Name of the dependent variable column.}
 }
 \value{
 Linear regression stats
 }
 \description{
-This function takes two variables and runs a simple linear regression and outputs the stats
+This function takes a dataframe and two column names, then runs a simple linear regression and outputs the stats
 }
 \examples{
-x <- c(2, 4, 6, 8)
-y <- c(10, 12, 14, 20)
-data <- data.frame(x, y)
-
-simpleregression(data)
+data <- data.frame(MSFT = c(2, 4, 6, 8), AAPL = c(10, 12, 14, 20))
+simpleregression(data, 'MSFT', 'AAPL')
 
 }
