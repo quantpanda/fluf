@@ -16,11 +16,12 @@
 plot_fluf <- function(ticker) {
   # Get historical stock data using tq_get
   stock_data <- tidyquant::tq_get(ticker, from = Sys.Date() - 365, to = Sys.Date())
+
   # Plotting using plotly
   plot <- plotly::plot_ly(stock_data, x = ~date, y = ~adjusted, type = 'scatter', mode = 'lines', line = list(color = 'blue')) %>%
-    layout(title = paste("Last Year Closing Prices for", ticker),
-           xaxis = list(title = "Date"),
-           yaxis = list(title = "Closing Price"))
+    plotly::layout(title = paste0("Last Year Closing Prices for ", ticker),
+                   xaxis = list(title = "Date"),
+                   yaxis = list(title = "Closing Price"))
 
   # Show the interactive plot
   return(plot)
