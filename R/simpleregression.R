@@ -13,7 +13,7 @@
 #'
 #' @export
 simpleregression <- function(data, indep_col, dep_col) {
-  formula <- as.formula(paste(dep_col, "~", indep_col))
+  formula <- stats::as.formula(paste(dep_col, "~", indep_col))
   lr <- stats::lm(formula, data = data)
   lrstats <- summary(lr)
   return(lrstats)

@@ -8,7 +8,6 @@
 # this load a dataset of s&p500 stock prices for the last 4 years.
 library(tidyquant)
 library(tidyverse)
-library(tidyr)
 
 ## snp
 snp <-
