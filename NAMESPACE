@@ -2,7 +2,9 @@
 
 export("%>%")
 export(bolBands)
+export(plot_fluf)
 export(plotter)
 export(simpleregression)
 import(plotly)
+import(tidyquant)
 importFrom(magrittr,"%>%")
