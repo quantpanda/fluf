@@ -15,7 +15,7 @@ You can install the development version of fluf from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("tigerwoodsjr/fluf")
+devtools::install_github("quantpanda/fluf")
 ```
 
 ## Example
